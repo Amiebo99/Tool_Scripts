@@ -1,0 +1,2 @@
+[console_scripts]
+FTIR_concatenate = FTIR_concatenate.processor:main

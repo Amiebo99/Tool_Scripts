@@ -1,0 +1,10 @@
+README.md
+setup.py
+FTIR_concatenate/__init__.py
+FTIR_concatenate/processor.py
+FTIR_concatenate.egg-info/PKG-INFO
+FTIR_concatenate.egg-info/SOURCES.txt
+FTIR_concatenate.egg-info/dependency_links.txt
+FTIR_concatenate.egg-info/entry_points.txt
+FTIR_concatenate.egg-info/requires.txt
+FTIR_concatenate.egg-info/top_level.txt

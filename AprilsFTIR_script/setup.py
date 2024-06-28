@@ -1,12 +1,12 @@
 from setuptools import setup, find_packages
 
 setup(
-    name='csv_processor',
+    name='FTIR_concatenate',
     version='0.1',
     packages=find_packages(),
     entry_points={
         'console_scripts': [
-            'csv_processor=csv_processor.processor:main',
+            'FTIR_concatenate=FTIR_concatenate.processor:main',
         ],
     },
     install_requires=[
