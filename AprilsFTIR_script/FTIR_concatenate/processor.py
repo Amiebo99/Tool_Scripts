@@ -5,8 +5,7 @@ import argparse
 
 # Function to extract a section from the filename
 def extract_section_from_filename(filename):
-    # Example extraction: extract the part between 'data_' and '.csv'
-    # Adjust the splitting logic based on your actual filename format
+    # This is severely hard coded but if the foramt is identical every time then we are all good
     section = filename[32:40]
     return section
 
