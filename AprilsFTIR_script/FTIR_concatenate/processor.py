@@ -17,7 +17,7 @@ def main(directory, output_filename):
     # Process each CSV file in the directory
     for filepath in glob.glob(os.path.join(directory, '*.DPT')):
         filename = os.path.basename(filepath)
-        print(filename[-18:])
+        # print(filename[-18:]) only for debugging
         if filename[-18:] == "_Temperature.0.DPT":
             section = extract_section_from_filename(filename)
         
