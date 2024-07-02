@@ -7,7 +7,7 @@ import argparse
 def extract_section_from_filename(filename):
     # Example extraction: extract the part between 'data_' and '.csv'
     # Adjust the splitting logic based on your actual filename format
-    section = filename.split('_')[1].split('.')[0]
+    section = filename[32:40]
     return section
 
 def main(directory, output_filename):
@@ -15,18 +15,20 @@ def main(directory, output_filename):
     df_list = []
 
     # Process each CSV file in the directory
-    for filepath in glob.glob(os.path.join(directory, '*.csv')):
+    for filepath in glob.glob(os.path.join(directory, '*.DPT')):
         filename = os.path.basename(filepath)
-        section = extract_section_from_filename(filename)
+        print(filename[-18:])
+        if filename[-18:] == "_Temperature.0.DPT":
+            section = extract_section_from_filename(filename)
         
-        # Read the CSV file into a DataFrame (assuming no headers)
-        df = pd.read_csv(filepath, header=None)
-        
-        # Add the extracted section as the third column
-        df[2] = section
-        
-        # Append the DataFrame to the list
-        df_list.append(df)
+            # Read the CSV file into a DataFrame (assuming no headers)
+            df = pd.read_csv(filepath, header=None)
+            
+            # Add the extracted section as the third column
+            df[2] = section
+            
+            # Append the DataFrame to the list
+            df_list.append(df)
 
     # Concatenate all DataFrames into one
     final_df = pd.concat(df_list, ignore_index=True)
