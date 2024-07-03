@@ -8,7 +8,7 @@ def extract_section_from_filename(filename):
     # split via underscores and grab the second to last section
     sections = filename.split("_")
     # print(sections) # debugging
-    section = sections[-2]
+    section = sections[-2] # this should be the number we need
     # print(section) # debugging
     return section
 
