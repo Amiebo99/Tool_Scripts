@@ -5,8 +5,11 @@ import argparse
 
 # Function to extract a section from the filename
 def extract_section_from_filename(filename):
-    # This is severely hard coded but if the foramt is identical every time then we are all good
-    section = filename[32:40]
+    # split via underscores and grab the second to last section
+    sections = filename.split("_")
+    # print(sections) # debugging
+    section = sections[-2]
+    # print(section) # debugging
     return section
 
 def main(directory, output_filename):
